@@ -22,8 +22,8 @@ export const app = new Frog({
 app.frame('/', (c) => {
   return c.res({
     action: '/finish',
-    image: 'http://localhost:5173/og.jpg',
-    imageAspectRatio: '1:1',
+    image: 'http://localhost:5173/og.png',
+    // imageAspectRatio: '1:1',
     intents: [<Button.Transaction target="/mint">Mint</Button.Transaction>],
     // image: (
     //   <div style={{ color: 'white', display: 'flex', fontSize: 60 }}>
