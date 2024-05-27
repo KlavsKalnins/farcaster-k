@@ -1,6 +1,6 @@
 import { Button, Frog } from 'frog'
 import { devtools } from 'frog/dev'
-//import { pinata } from 'frog/hubs'
+import { pinata } from 'frog/hubs'
 import { serveStatic } from 'frog/serve-static'
 import { handle } from 'frog/vercel'
 import type { Address } from 'viem'
@@ -15,7 +15,7 @@ export const config = {
 export const app = new Frog({
   basePath: '/api',
   // Supply a Hub API URL to enable frame verification.
-  //hub: pinata(),
+  hub: pinata(),
   // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' }),
 })
 
