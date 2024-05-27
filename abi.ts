@@ -1965,4 +1965,4 @@ export const abi = [
     ],
     stateMutability: "view",
   },
-];
+] as const
