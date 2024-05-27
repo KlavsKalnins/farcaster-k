@@ -22,14 +22,14 @@ export const app = new Frog({
 app.frame('/', (c) => {
   return c.res({
     action: '/finish',
-    image: 'http://localhost:5173/og.png',
+    // image: 'http://localhost:5173/og.png',
     // imageAspectRatio: '1:1',
     intents: [<Button.Transaction target="/mint">Mint</Button.Transaction>],
-    // image: (
-    //   <div style={{ color: 'white', display: 'flex', fontSize: 60 }}>
-    //     Perform a transaction
-    //   </div>
-    // ),
+    image: (
+      <div style={{ color: 'white', display: 'flex', fontSize: 60 }}>
+        Perform a transaction
+      </div>
+    ),
     // intents: [<Button.Transaction target="/mint">Mint</Button.Transaction>],
   })
 })
