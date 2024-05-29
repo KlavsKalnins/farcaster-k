@@ -26,8 +26,8 @@ app.frame('/', (c) => {
     // imageAspectRatio: '1:1',
     intents: [<Button.Transaction target="/mint">Mint</Button.Transaction>],
     image: (
-      <div style={{ color: 'white', display: 'flex', fontSize: 60 }}>
-        Perform a transaction
+      <div style={{ color: 'white', display: 'flex', fontSize: 50,  }}>
+        <h2>Perform a transaction to mint zeeverse nft</h2>
       </div>
     ),
     // intents: [<Button.Transaction target="/mint">Mint</Button.Transaction>],
