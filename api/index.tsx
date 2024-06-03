@@ -7,6 +7,13 @@ import type { Address } from 'viem'
 import { baseSepolia } from 'viem/chains'
 import { abi } from '../abi.js'
 
+const GAME_URL = {
+	ios: "https://testflight.apple.com/join/x7XlR5Ij",
+	android: "https://play.google.com/store/apps/details?id=com.zeeverse.zee",
+	webgl: "https://play.zee-verse.com/",
+	epic: "https://store.epicgames.com/en-US/p/zeeverse-92a34e",
+};
+
 // Uncomment to use Edge Runtime.
 export const config = {
   runtime: 'edge',
@@ -70,6 +77,23 @@ app.transaction('/mint', (c) => {
     to: '0x5D26e97F4383dDeAC24F0DF514452906fd35B088', // web3 nft contract adress
   })
 })
+
+app.frame('/play', (c) => {
+  return c.res({
+    image: (
+      <div style={{ color: 'white', display: 'flex', fontSize: 60 }}>
+        <h1>PLAY ZEEVERSE</h1>
+      </div>
+    ),
+    intents: [
+      <Button.Link href={GAME_URL.android}>Android</Button.Link>,
+      <Button.Link href={GAME_URL.ios}>IOS</Button.Link>,
+      <Button.Link href={GAME_URL.webgl}>Play on website</Button.Link>,
+      <Button.Link href={GAME_URL.epic}>Epic Launcher</Button.Link>
+    ]
+  })
+})
+
 
 devtools(app, { serveStatic })
 

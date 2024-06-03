@@ -5,7 +5,8 @@
   "scripts": {
     "build": "frog vercel-build",
     "dev": "frog dev",
-    "deploy": "vercel"
+    "deploy": "vercel",
+    "frames": "frog dev"
   },
   "dependencies": {
     "frog": "latest",
